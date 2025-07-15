@@ -2,7 +2,9 @@ import streamlit as st
 import requests
 
 # ✅ Hardcoded API Key
-API_KEY = "25532a07aa495f29a8947eaeeb5a4939"  # <--- Tumhari API key yahan fixed hai
+import streamlit as st
+
+API_KEY = st.secrets["API_KEY"]
 
 def get_weather(city):
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
